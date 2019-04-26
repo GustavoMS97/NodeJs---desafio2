@@ -1,0 +1,16 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+  <div class="content">
+    <strong>Olá, {{user.name}}</strong>
+    {% if user.provider === true %}
+      {% include "_layouts/barber_dash.njk" %}
+    {% endif %}
+
+    {% if user.provider === false %}
+      {% include "_layouts/client_dash.njk" %}
+    {% endif %}
+
+    <a href="/app/logout" class="logout" >Sair</a>
+  </div>
+{% endblock %}

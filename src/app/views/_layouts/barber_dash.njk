@@ -1,0 +1,14 @@
+<p>Estes são os seus agendamentos para hoje, veja em detalhes abaixo: </p>
+
+<ul class="providers" >
+  {% for appointment in data %}
+    <li class="provider" >
+      <div>
+        <img src="/files/{{ appointment.Client.avatar }}" />
+        <strong>{{appointment.Client.name}}</strong>
+        <strong>Horário:</strong>
+        <span>{{ appointment.date.getHours() }}:00</span>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
