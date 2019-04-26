@@ -1,5 +1,6 @@
 node_modules
 .vscode
-tmp/*
+tmp/sessions/*
+tmp/uploads/*
 !tmp/sessions/.gitkeep
 !tmp/uploads/.gitkeep
